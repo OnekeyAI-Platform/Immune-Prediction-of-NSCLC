@@ -1,0 +1,20 @@
+ml_models: 
+ - LR
+#  - SVM
+ - XGBoost
+ - LightGBM
+ - RandomForest
+ - ExtraTrees
+#  - MLP
+data_root: F:\20240120-HanDanDan
+label_file: group.csv
+clinic_file: F:\20240120-HanDanDan\Clinical.csv
+# label_file: F:\20240120-HanDanDan\split_info\label-RND-3.csv
+subsets: [train, val, test]
+label_mapping: 
+  0: non-MPR
+  1: MPR
+metric_spec: AUC
+metric_spec_ids: 
+metric_spec_agg: mean
+DISABLE_VIDEO: True
